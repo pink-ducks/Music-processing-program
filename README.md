@@ -3,4 +3,5 @@
 #### Our team:
 - Mateusz
 - Wojtek
-- **Bartek** :sunglasses:    
+- Bartek
+- Paulina
