@@ -1,4 +1,4 @@
 # Music-processing-program
 
-Our team:
+#### Our team:
 - Mateusz
