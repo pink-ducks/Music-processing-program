@@ -3,3 +3,5 @@
 #### Our team:
 - Mateusz
 - Wojtek
+- Bartek
+- Paulina
