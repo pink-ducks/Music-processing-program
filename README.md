@@ -2,7 +2,8 @@
 
 #### Our team:
 - Mateusz
+- Paulina
 - Wojtek
 - Bartek
-- Paulina
+- Pawel
 - Kuba
