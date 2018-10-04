@@ -154,6 +154,9 @@
     <ClInclude Include="menu.h" />
     <ClInclude Include="menu_vectors.h" />
   </ItemGroup>
+  <ItemGroup>
+    <Library Include="bass.lib" />
+  </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
   </ImportGroup>
