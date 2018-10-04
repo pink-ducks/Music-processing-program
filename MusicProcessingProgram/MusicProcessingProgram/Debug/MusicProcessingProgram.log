@@ -1,4 +1,13 @@
+<<<<<<< HEAD
 ﻿  main.cpp
 c:\users\user\documents\github\music-processing-program1\musicprocessingprogram\musicprocessingprogram\main.cpp(8): warning C4101: 'streamHandle': unreferenced local variable
 main.obj : error LNK2019: unresolved external symbol _BASS_Init@20 referenced in function _main
 C:\Users\User\Documents\GitHub\Music-processing-program1\MusicProcessingProgram\Debug\MusicProcessingProgram.exe : fatal error LNK1120: 1 unresolved externals
+=======
+﻿  menu.cpp
+  Generowanie kodu...
+  Trwa kompilowanie...
+  main.cpp
+  Generowanie kodu...
+  MusicProcessingProgram.vcxproj -> D:\Users\Jakub Głatki\GitHub\Music-processing-program\MusicProcessingProgram\Debug\MusicProcessingProgram.exe
+>>>>>>> 46f75af24d81341bcf74a15a74774e178207535c

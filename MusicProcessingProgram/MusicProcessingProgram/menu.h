@@ -6,13 +6,17 @@
 class Menu
 {
 	private:
+
 		std::vector<std::string> options;
 	public:
 		Menu(std::vector<std::string> actions_strings)
 		{
 			options = actions_strings;
 		}
-	void show();
+		
+
+		void show();
+		~Menu() {};
 };
 
 #endif 
