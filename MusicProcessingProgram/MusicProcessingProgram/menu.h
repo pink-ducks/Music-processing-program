@@ -5,9 +5,9 @@
 
 class Menu
 {
-	private:
-
+    private:
 		std::vector<std::string> options;
+
 	public:
 		Menu(std::vector<std::string> actions_strings)
 		{
