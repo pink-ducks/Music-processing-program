@@ -8,4 +8,3 @@ void Menu::show()
 		std::cout << *i << std::endl;
 	}
 }
-
