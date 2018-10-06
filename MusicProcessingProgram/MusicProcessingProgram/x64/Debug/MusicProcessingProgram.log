@@ -1,6 +1,0 @@
-﻿main.obj : error LNK2019: nierozpoznany zewnętrzny symbol BASS_Init przywołany w funkcji main
-main.obj : error LNK2019: nierozpoznany zewnętrzny symbol BASS_Free przywołany w funkcji main
-main.obj : error LNK2019: nierozpoznany zewnętrzny symbol BASS_StreamCreateFile przywołany w funkcji main
-main.obj : error LNK2019: nierozpoznany zewnętrzny symbol BASS_ChannelPlay przywołany w funkcji main
-bass.lib : warning LNK4272: wystąpił konflikt typu maszyny biblioteki „x86” z typem maszyny docelowej „x64”
-D:\Users\Jakub Głatki\GitHub\Music-processing-program\MusicProcessingProgram\x64\Debug\MusicProcessingProgram.exe : fatal error LNK1120: liczba nierozpoznanych elementów zewnętrznych: 4
