@@ -1,5 +1,6 @@
 #include "menu.h"
 #include "bass.h"
+#include "display_formatting.h"
 #include <stdlib.h>  
 #include <crtdbg.h>
 #include <vector>
@@ -46,7 +47,7 @@ int main()
 	{
 		if (main_menu.move_arrow())
 		{
-			//clrscr
+			clear_screen();
 			main_menu.show();
 			break;
 		}

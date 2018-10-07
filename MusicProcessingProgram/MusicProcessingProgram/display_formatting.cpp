@@ -5,6 +5,11 @@
 #define VERTICAL_SPACING 4
 #define HORIZONTAL_SPACE 50
 
+void clear_screen()
+{
+	system("cls");
+}
+
 void multi_endl(int endl_number)
 {
 	for (int i = 0; i < endl_number; i++)
