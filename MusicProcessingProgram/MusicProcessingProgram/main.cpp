@@ -1,8 +1,8 @@
 #include "menu.h"
+#include "menu_actions.h"
 #include "bass.h"
-#include "press_and_save.h"
-#include "display_formatting.h"
 
+#include <iostream>
 #include <stdlib.h>  
 #include <crtdbg.h>
 #include <vector>
@@ -19,6 +19,7 @@ struct AtExit
 
 int main()
 {
+	int action_index = 0;
 	std::vector<std::string> main_menu_strings
 	{
 		"> Create new sounds!",
@@ -41,18 +42,10 @@ int main()
 	/* As very last, close Bass */
  	BASS_Free(); 
 	
-
 	Menu main_menu(main_menu_strings);
+	action_index = select_menu_action(main_menu);
 
-	main_menu.show();
-	while (!GetAsyncKeyState(VK_ESCAPE))
-	{
-		if (main_menu.move_arrow())
-		{
-			clear_screen();
-			main_menu.show();
-			break;
-		}
-	}
+	std::cout << std::endl << " action: " << action_index;
+
     return 0;
 }
