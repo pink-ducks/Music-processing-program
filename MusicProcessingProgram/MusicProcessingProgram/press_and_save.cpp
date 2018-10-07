@@ -34,18 +34,23 @@ void PressAndSaveToFile() {
 	KEY_EVENT_RECORD key = { 0, 0, 0, 0, };
 	std::ofstream myfile;
 	myfile.open("example.txt");
-
-	do
+	if (myfile)
 	{
-		getconchar(key);
-		if (key.wVirtualKeyCode != VK_RETURN) {
-			std::cout << "You pressed and saved to file : " << key.uChar.AsciiChar << std::endl;
-			myfile << key.uChar.AsciiChar << std::endl;
-		}
-		if (key.wVirtualKeyCode == VK_RETURN) {
-			std::cout << "You finished !" << std::endl;
-			myfile.close();
-		}
-	} while (key.wVirtualKeyCode != VK_RETURN);
-
+		do
+		{
+			getconchar(key);
+			if (key.wVirtualKeyCode != VK_RETURN) {
+				std::cout << "You pressed and saved to file : " << key.uChar.AsciiChar << std::endl;
+				myfile << key.uChar.AsciiChar;
+			}
+			if (key.wVirtualKeyCode == VK_RETURN) {
+				std::cout << "You finished !" << std::endl;
+			}
+		} while (key.wVirtualKeyCode != VK_RETURN);
+	}
+	else
+	{
+		std::cout << "Problem with file opening ";
+	}
+	myfile.close();
 }
