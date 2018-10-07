@@ -5,7 +5,7 @@
 #include <Windows.h>
 
 bool getconchar(KEY_EVENT_RECORD& krec);
-void PressAndSaveToFile();
+void press_and_save_to_file();
 
 
 #endif

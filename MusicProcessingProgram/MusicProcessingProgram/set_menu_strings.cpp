@@ -12,3 +12,14 @@ std::vector<std::string> set_main_menu()
 	};
 	return main_menu_strings;
 }
+
+std::vector<std::string> set_save_menu()
+{
+	std::vector<std::string> save_menu_strings
+	{
+		"> Save as .mp3",
+		"  Save as .txt",
+		"  Back"
+	};
+	return save_menu_strings;
+}

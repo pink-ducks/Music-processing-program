@@ -2,6 +2,7 @@
 #include "set_menu_strings.h"
 #include "menu_actions.h"
 #include "bass.h"
+#include "press_and_save.h"
 
 #include <iostream>
 #include <stdlib.h>  
@@ -37,9 +38,27 @@ int main()
 	
 	int action_index = 0;
 	Menu main_menu(set_main_menu());
+	Menu save_menu(set_save_menu());
 	action_index = select_menu_action(main_menu);
-
 	std::cout << std::endl << " action: " << action_index;
+	if (action_index == 0)
+	{
+		action_index = select_menu_action(save_menu);
+		if (action_index == 0)
+		{
+			// save as .mp3
+		}
+		else if (action_index == 1)
+		{
+			press_and_save_to_file();
+		}
+	}
+	else if (action_index == 1)
+	{
+		// load menu
+	}
+
+	std::cout << std::endl << " Bye!";
 
     return 0;
 }
