@@ -152,12 +152,14 @@
     <ClCompile Include="menu.cpp" />
     <ClCompile Include="menu_actions.cpp" />
     <ClCompile Include="press_and_save.cpp" />
+    <ClCompile Include="set_menu_strings.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="display_formatting.h" />
     <ClInclude Include="menu.h" />
     <ClInclude Include="menu_actions.h" />
     <ClInclude Include="press_and_save.h" />
+    <ClInclude Include="set_menu_strings.h" />
   </ItemGroup>
   <ItemGroup>
     <Library Include="bass.lib" />

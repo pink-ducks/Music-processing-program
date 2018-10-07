@@ -1,4 +1,5 @@
 #include "menu.h"
+#include "set_menu_strings.h"
 #include "menu_actions.h"
 #include "bass.h"
 
@@ -19,14 +20,6 @@ struct AtExit
 
 int main()
 {
-	int action_index = 0;
-	std::vector<std::string> main_menu_strings
-	{
-		"> Create new sounds!",
-		"  Play music from a file",
-		"  Quit :("
-	};
-
 	int device = -1; // Default Sounddevice
 	int freq = 44100; // Sample rate (Hz)
 	HSTREAM stream_handle; // Handle for open stream
@@ -42,7 +35,8 @@ int main()
 	/* As very last, close Bass */
  	BASS_Free(); 
 	
-	Menu main_menu(main_menu_strings);
+	int action_index = 0;
+	Menu main_menu(set_main_menu());
 	action_index = select_menu_action(main_menu);
 
 	std::cout << std::endl << " action: " << action_index;
