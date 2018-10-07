@@ -150,10 +150,12 @@
     <ClCompile Include="display_formatting.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="menu.cpp" />
+    <ClCompile Include="press_and_save.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="display_formatting.h" />
     <ClInclude Include="menu.h" />
+    <ClInclude Include="press_and_save.h" />
   </ItemGroup>
   <ItemGroup>
     <Library Include="bass.lib" />
