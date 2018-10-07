@@ -148,7 +148,7 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="display_formatting.cpp" />
-    <ClCompile Include="File_Support.cpp" />
+    <ClCompile Include="file_support.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="menu.cpp" />
     <ClCompile Include="menu_actions.cpp" />
@@ -157,7 +157,7 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="display_formatting.h" />
-    <ClInclude Include="File_Support.h" />
+    <ClInclude Include="file_support.h" />
     <ClInclude Include="menu.h" />
     <ClInclude Include="menu_actions.h" />
     <ClInclude Include="press_and_save.h" />

@@ -1,9 +1,9 @@
 #include "press_and_save.h"
+#include "file_support.h"
 #include <fstream>
 #include <iostream>
+#include <string>
 #include <Windows.h>
-
-
 
 bool getconchar(KEY_EVENT_RECORD& krec)
 {
@@ -33,7 +33,8 @@ bool getconchar(KEY_EVENT_RECORD& krec)
 void press_and_save_to_file() {
 	KEY_EVENT_RECORD key = { 0, 0, 0, 0, };
 	std::ofstream myfile;
-	myfile.open("example.txt");
+	std::string file_path = file_path_from_user();
+	myfile.open(file_path);
 	if (myfile)
 	{
 		std::cout << " Play music on your keyboard! " << std::endl;

@@ -1,65 +1,57 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup>
-    <Filter Include="Pliki źródłowe">
-      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
-      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
-    </Filter>
-    <Filter Include="Pliki nagłówkowe">
-      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
-      <Extensions>h;hh;hpp;hxx;hm;inl;inc;xsd</Extensions>
-    </Filter>
-    <Filter Include="Pliki zasobów">
-      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
-      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
-    </Filter>
-  </ItemGroup>
-  <ItemGroup>
+    <ClCompile Include="display_formatting.cpp">
+      <Filter>pliki .cpp</Filter>
+    </ClCompile>
     <ClCompile Include="main.cpp">
-      <Filter>Pliki źródłowe</Filter>
+      <Filter>pliki .cpp</Filter>
     </ClCompile>
     <ClCompile Include="menu.cpp">
-      <Filter>Pliki źródłowe</Filter>
-    </ClCompile>
-    <ClCompile Include="display_formatting.cpp">
-      <Filter>Pliki źródłowe</Filter>
-    </ClCompile>
-<<<<<<< HEAD
-    <ClCompile Include="File_Support.cpp">
-=======
-    <ClCompile Include="press_and_save.cpp">
->>>>>>> 293c00ba795b2d208a57d1e25d6ebd9626280f2a
-      <Filter>Pliki źródłowe</Filter>
+      <Filter>pliki .cpp</Filter>
     </ClCompile>
     <ClCompile Include="menu_actions.cpp">
-      <Filter>Pliki źródłowe</Filter>
+      <Filter>pliki .cpp</Filter>
+    </ClCompile>
+    <ClCompile Include="press_and_save.cpp">
+      <Filter>pliki .cpp</Filter>
     </ClCompile>
     <ClCompile Include="set_menu_strings.cpp">
-      <Filter>Pliki źródłowe</Filter>
+      <Filter>pliki .cpp</Filter>
+    </ClCompile>
+    <ClCompile Include="file_support.cpp">
+      <Filter>pliki .cpp</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="menu.h">
-      <Filter>Pliki nagłówkowe</Filter>
-    </ClInclude>
     <ClInclude Include="display_formatting.h">
-      <Filter>Pliki nagłówkowe</Filter>
-    </ClInclude>
-<<<<<<< HEAD
-    <ClInclude Include="File_Support.h">
-=======
-    <ClInclude Include="press_and_save.h">
->>>>>>> 293c00ba795b2d208a57d1e25d6ebd9626280f2a
-      <Filter>Pliki nagłówkowe</Filter>
+      <Filter>pliki .h</Filter>
     </ClInclude>
     <ClInclude Include="menu_actions.h">
-      <Filter>Pliki nagłówkowe</Filter>
+      <Filter>pliki .h</Filter>
+    </ClInclude>
+    <ClInclude Include="press_and_save.h">
+      <Filter>pliki .h</Filter>
     </ClInclude>
     <ClInclude Include="set_menu_strings.h">
-      <Filter>Pliki nagłówkowe</Filter>
+      <Filter>pliki .h</Filter>
+    </ClInclude>
+    <ClInclude Include="menu.h">
+      <Filter>pliki .h</Filter>
+    </ClInclude>
+    <ClInclude Include="file_support.h">
+      <Filter>pliki .h</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <Library Include="bass.lib" />
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="pliki .cpp">
+      <UniqueIdentifier>{51235ac7-d11b-454a-b127-5ea3beb38cfd}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="pliki .h">
+      <UniqueIdentifier>{17047685-89a1-4f54-8624-55bea9bb5d85}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
 </Project>

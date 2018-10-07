@@ -4,8 +4,6 @@
 #include "bass.h"
 #include "press_and_save.h"
 
-#include <iostream>
-#include <stdlib.h>  
 #include <crtdbg.h>
 #define _CRTDBG_MAP_ALLOC
 

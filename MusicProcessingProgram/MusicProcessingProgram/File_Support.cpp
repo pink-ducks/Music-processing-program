@@ -1,19 +1,11 @@
-
-#include <stdlib.h>  
-#include <crtdbg.h>
-#include <fstream>
 #include <iostream>
 #include <string>
 
-std::string File_path_from_user()
+std::string file_path_from_user()
 {
-	std::ifstream infile;
-	while (true)
-	{
-		std::string infilename;
-		getline(std::cin, infilename);
-		infile.open(infilename.c_str());
-		if (infile) return infilename;
-		std::cout << "Invalid file. Please enter a valid input file name" << std::flush;
-	}
+	std::string path;
+	std::cout << std::endl << " Enter the file name or file path" << std::endl;
+	std::cout << " for example: test.txt" << std::endl;
+	std::cin >> path;
+	return path;
 }
