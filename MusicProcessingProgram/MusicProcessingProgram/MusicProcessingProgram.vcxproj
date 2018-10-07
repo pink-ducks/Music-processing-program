@@ -154,7 +154,6 @@
   <ItemGroup>
     <ClInclude Include="display_formatting.h" />
     <ClInclude Include="menu.h" />
-    <ClInclude Include="menu_vectors.h" />
   </ItemGroup>
   <ItemGroup>
     <Library Include="bass.lib" />
