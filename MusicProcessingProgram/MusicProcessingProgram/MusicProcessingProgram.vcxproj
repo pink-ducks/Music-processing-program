@@ -148,11 +148,13 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="display_formatting.cpp" />
+    <ClCompile Include="File_Support.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="menu.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="display_formatting.h" />
+    <ClInclude Include="File_Support.h" />
     <ClInclude Include="menu.h" />
   </ItemGroup>
   <ItemGroup>
