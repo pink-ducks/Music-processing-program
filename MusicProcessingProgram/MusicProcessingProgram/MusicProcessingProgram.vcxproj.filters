@@ -24,7 +24,11 @@
     <ClCompile Include="display_formatting.cpp">
       <Filter>Pliki źródłowe</Filter>
     </ClCompile>
+<<<<<<< HEAD
     <ClCompile Include="File_Support.cpp">
+=======
+    <ClCompile Include="press_and_save.cpp">
+>>>>>>> 293c00ba795b2d208a57d1e25d6ebd9626280f2a
       <Filter>Pliki źródłowe</Filter>
     </ClCompile>
   </ItemGroup>
@@ -35,7 +39,11 @@
     <ClInclude Include="display_formatting.h">
       <Filter>Pliki nagłówkowe</Filter>
     </ClInclude>
+<<<<<<< HEAD
     <ClInclude Include="File_Support.h">
+=======
+    <ClInclude Include="press_and_save.h">
+>>>>>>> 293c00ba795b2d208a57d1e25d6ebd9626280f2a
       <Filter>Pliki nagłówkowe</Filter>
     </ClInclude>
   </ItemGroup>
