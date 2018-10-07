@@ -46,7 +46,7 @@ void press_and_save_to_file() {
 				myfile << key.uChar.AsciiChar;
 			}
 			if (key.wVirtualKeyCode == VK_RETURN) {
-				std::cout << "Your music is saved in your file!" << std::endl;
+				std::cout << std::endl << "Your music is saved in your file!" << std::endl;
 			}
 		} while (key.wVirtualKeyCode != VK_RETURN);
 	}

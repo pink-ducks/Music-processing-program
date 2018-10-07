@@ -7,7 +7,6 @@
 #include <iostream>
 #include <stdlib.h>  
 #include <crtdbg.h>
-#include <vector>
 #define _CRTDBG_MAP_ALLOC
 
 struct AtExit
@@ -36,27 +35,11 @@ int main()
 	/* As very last, close Bass */
  	BASS_Free(); 
 	
-	int action_index = 0;
+	int menu_index = 0;
 	Menu main_menu(set_main_menu());
 	Menu save_menu(set_save_menu());
-	action_index = select_menu_action(main_menu);
-	std::cout << std::endl << " action: " << action_index;
-	if (action_index == 0)
-	{
-		action_index = select_menu_action(save_menu);
-		if (action_index == 0)
-		{
-			// save as .mp3
-		}
-		else if (action_index == 1)
-		{
-			press_and_save_to_file();
-		}
-	}
-	else if (action_index == 1)
-	{
-		// load menu
-	}
+	menu_index = run_menu(main_menu);
+	manage_main_menu(menu_index, main_menu, save_menu);
 
 	std::cout << std::endl << " Bye!";
 
