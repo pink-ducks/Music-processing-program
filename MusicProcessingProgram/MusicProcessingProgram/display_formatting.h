@@ -3,4 +3,8 @@
 
 void multi_endl(int endl_number);
 
+void upper_space();
+
+void center_text();
+
 #endif 

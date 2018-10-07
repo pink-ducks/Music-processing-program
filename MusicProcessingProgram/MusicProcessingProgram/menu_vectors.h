@@ -7,5 +7,4 @@ std::vector<std::string> main_menu_strings
 	"  Play music from a file",
 	"  Quit :("
 };
-
 #endif 
