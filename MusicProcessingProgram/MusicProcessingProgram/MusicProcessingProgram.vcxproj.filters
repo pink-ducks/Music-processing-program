@@ -31,6 +31,12 @@
 >>>>>>> 293c00ba795b2d208a57d1e25d6ebd9626280f2a
       <Filter>Pliki źródłowe</Filter>
     </ClCompile>
+    <ClCompile Include="menu_actions.cpp">
+      <Filter>Pliki źródłowe</Filter>
+    </ClCompile>
+    <ClCompile Include="set_menu_strings.cpp">
+      <Filter>Pliki źródłowe</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="menu.h">
@@ -44,6 +50,12 @@
 =======
     <ClInclude Include="press_and_save.h">
 >>>>>>> 293c00ba795b2d208a57d1e25d6ebd9626280f2a
+      <Filter>Pliki nagłówkowe</Filter>
+    </ClInclude>
+    <ClInclude Include="menu_actions.h">
+      <Filter>Pliki nagłówkowe</Filter>
+    </ClInclude>
+    <ClInclude Include="set_menu_strings.h">
       <Filter>Pliki nagłówkowe</Filter>
     </ClInclude>
   </ItemGroup>

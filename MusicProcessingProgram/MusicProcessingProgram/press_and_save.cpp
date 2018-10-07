@@ -30,12 +30,14 @@ bool getconchar(KEY_EVENT_RECORD& krec)
 	return false;
 }
 
-void PressAndSaveToFile() {
+void press_and_save_to_file() {
 	KEY_EVENT_RECORD key = { 0, 0, 0, 0, };
 	std::ofstream myfile;
 	myfile.open("example.txt");
 	if (myfile)
 	{
+		std::cout << " Play music on your keyboard! " << std::endl;
+		std::cout << " If you're done, press ENTER " << std::endl;
 		do
 		{
 			getconchar(key);
@@ -44,7 +46,7 @@ void PressAndSaveToFile() {
 				myfile << key.uChar.AsciiChar;
 			}
 			if (key.wVirtualKeyCode == VK_RETURN) {
-				std::cout << "You finished !" << std::endl;
+				std::cout << std::endl << "Your music is saved in your file!" << std::endl;
 			}
 		} while (key.wVirtualKeyCode != VK_RETURN);
 	}

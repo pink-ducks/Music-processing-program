@@ -13,28 +13,25 @@ void Menu::show()
 	}
 }
 
-bool Menu::move_arrow()
+int Menu::move_arrow()
 {
-	bool is_moved = false;
 	if (GetAsyncKeyState(VK_UP))
 	{
-		if (this->index != 0)
+		if (index != 0)
 		{
-			this->options.at(index).insert(1, " ");
-			this->index = this->index - 1;
-			is_moved = true;
-			this->options.at(index).insert(1, ">");
+			options.at(index).replace(0, 1, " ");
+			index = index - 1;
+			options.at(index).replace(0, 1, ">");
 		}
 	} else
 	if (GetAsyncKeyState(VK_DOWN))
 	{
-		if (this->index != this->options.size())
+		if (index != options.size() - 1)
 		{
-			this->options.at(index).insert(1, " ");
-			this->index = this->index + 1;
-			is_moved = true;
-			this->options.at(index).insert(1, ">");
+			options.at(index).replace(0, 1, " ");
+			index = index + 1;
+			options.at(index).replace(0, 1, ">");
 		}
 	}
-	return is_moved;
+	return index;
 }

@@ -15,7 +15,7 @@ class Menu
 			index = 0;
 		}
 		
-		bool move_arrow();
+		int move_arrow();
 		void show();
 		~Menu() {};
 };
