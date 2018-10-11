@@ -20,9 +20,11 @@ struct AtExit
 
 int main()
 {
-	std::string file_name = file_path_from_user();
-	PlaySound(TEXT("a.wav"), NULL, SND_SYNC);
-	system("pause");
+	//playing random music
+	if (PlaySound(TEXT("../sounds/a.wav"), NULL, SND_SYNC))
+	{
+		system("pause");
+	}
 	
 	int menu_index = 0;
 	Menu main_menu(set_main_menu());
