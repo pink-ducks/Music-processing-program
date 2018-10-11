@@ -35,21 +35,21 @@ int run_menu(Menu & menu)
 	return action_index;
 }
 
-void manage_main_menu(int index, Menu & main_menu, Menu & save_menu) // Menu & load_menu to add
+void manage_main_menu(int index, Menu & main_menu, Menu & save_menu, Menu & load_menu) // Menu & load_menu to add
 {
 	if (index == 0)
 	{
 		index = run_menu(save_menu);
-		manage_save_menu(index, main_menu, save_menu);
+		manage_save_menu(index, main_menu, save_menu, load_menu);
 	}
 	else if (index == 1)
 	{
-		//index = run_menu(load_menu);
-		//manage_load_menu();
+		index = run_menu(load_menu);
+		manage_load_menu(index, main_menu, save_menu, load_menu);
 	}
 }
 
-void manage_save_menu(int index, Menu & main_menu, Menu & save_menu)
+void manage_save_menu(int index, Menu & main_menu, Menu & save_menu, Menu & load_menu)
 {
 	if (index == 0)
 	{
@@ -62,6 +62,23 @@ void manage_save_menu(int index, Menu & main_menu, Menu & save_menu)
 	else
 	{
 		index = run_menu(main_menu);
-		manage_main_menu(index, main_menu, save_menu);
+		manage_main_menu(index, main_menu, save_menu, load_menu);
+	}
+}
+
+void manage_load_menu(int index, Menu & main_menu, Menu & save_menu, Menu & load_menu)
+{
+	if (index == 0)
+	{
+		// load from .mp3
+	}
+	else if (index == 1)
+	{
+		//press_and_load_from_file();
+	}
+	else
+	{
+		index = run_menu(main_menu);
+		manage_main_menu(index, main_menu, save_menu, load_menu);
 	}
 }

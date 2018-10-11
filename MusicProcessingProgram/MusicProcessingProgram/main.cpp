@@ -36,8 +36,9 @@ int main()
 	int menu_index = 0;
 	Menu main_menu(set_main_menu());
 	Menu save_menu(set_save_menu());
+	Menu load_menu(set_load_menu());
 	menu_index = run_menu(main_menu);
-	manage_main_menu(menu_index, main_menu, save_menu);
+	manage_main_menu(menu_index, main_menu, save_menu, load_menu);
 
 	std::cout << std::endl << " Bye!";
 

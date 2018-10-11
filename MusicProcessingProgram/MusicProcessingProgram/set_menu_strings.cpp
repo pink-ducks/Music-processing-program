@@ -23,3 +23,14 @@ std::vector<std::string> set_save_menu()
 	};
 	return save_menu_strings;
 }
+
+std::vector<std::string> set_load_menu()
+{
+	std::vector<std::string> load_menu_strings
+	{
+		"> Load from .mp3",
+		"  Load from .txt",
+		"  Back"
+	};
+	return load_menu_strings;
+}
