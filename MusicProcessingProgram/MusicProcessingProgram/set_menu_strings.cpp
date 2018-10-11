@@ -2,7 +2,7 @@
 #include <vector>
 #include <string>
 
-std::vector<std::string> set_main_menu()
+std::vector<std::string> return_main_menu()
 {
 	std::vector<std::string> main_menu_strings
 	{
@@ -13,7 +13,7 @@ std::vector<std::string> set_main_menu()
 	return main_menu_strings;
 }
 
-std::vector<std::string> set_save_menu()
+std::vector<std::string> return_save_menu()
 {
 	std::vector<std::string> save_menu_strings
 	{
@@ -24,7 +24,7 @@ std::vector<std::string> set_save_menu()
 	return save_menu_strings;
 }
 
-std::vector<std::string> set_load_menu()
+std::vector<std::string> return_load_menu()
 {
 	std::vector<std::string> load_menu_strings
 	{

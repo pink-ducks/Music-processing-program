@@ -13,7 +13,8 @@ int select_menu_action(Menu menu_object)
 		clear_screen();
 		menu_object.show();
 		getconchar(key);
-		current_index = menu_object.move_arrow();
+		menu_object.move_arrow();
+		current_index = menu_object.get_index();
 		if (key.wVirtualKeyCode == VK_ESCAPE)
 		{
 			current_index = 2;

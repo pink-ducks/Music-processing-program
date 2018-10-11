@@ -9,13 +9,18 @@ class Menu
 		std::vector<std::string> options;
 		int index;
 	public:
-		Menu(std::vector<std::string> actions_strings)
+		Menu(std::vector<std::string> options)
 		{
-			options = actions_strings;
+			this->options = options;
 			index = 0;
 		}
 		
-		int move_arrow();
+		void set_vector(std::vector<std::string>);
+		void set_index(int);
+
+		int get_index();
+
+		void move_arrow();
 		void show();
 		~Menu() {};
 };

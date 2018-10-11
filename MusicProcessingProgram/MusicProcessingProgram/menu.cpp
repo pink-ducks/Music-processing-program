@@ -3,17 +3,22 @@
 #include <Windows.h>
 #include <iostream>
 
-void Menu::show()
+void Menu::set_vector(std::vector<std::string> options)
 {
-	upper_space();
-	for (auto i = options.begin(); i != options.end(); ++i)
-	{
-		center_text();
-		std::cout << *i << std::endl;
-	}
+	this->options = options;
 }
 
-int Menu::move_arrow()
+void Menu::set_index(int index)
+{
+	this->index = index;
+}
+
+int Menu::get_index()
+{
+	return index;
+}
+
+void Menu::move_arrow()
 {
 	if (GetAsyncKeyState(VK_UP))
 	{
@@ -33,5 +38,14 @@ int Menu::move_arrow()
 			options.at(index).replace(0, 1, ">");
 		}
 	}
-	return index;
+}
+
+void Menu::show()
+{
+	upper_space();
+	for (auto i = options.begin(); i != options.end(); ++i)
+	{
+		center_text();
+		std::cout << *i << std::endl;
+	}
 }

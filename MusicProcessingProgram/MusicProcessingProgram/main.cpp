@@ -20,16 +20,15 @@ struct AtExit
 
 int main()
 {
-	//playing random music
-	if (PlaySound(TEXT("../sounds/a.wav"), NULL, SND_SYNC))
-	{
-		system("pause");
-	}
+	// playing random music
+	std::cout << " *music*" << std::endl;
+	PlaySound(TEXT("../sounds/a.wav"), NULL, SND_SYNC);
 	
+	// menu
 	int menu_index = 0;
-	Menu main_menu(set_main_menu());
-	Menu save_menu(set_save_menu());
-	Menu load_menu(set_load_menu());
+	Menu main_menu(return_main_menu());
+	Menu save_menu(return_save_menu());
+	Menu load_menu(return_load_menu());
 	menu_index = run_menu(main_menu);
 	manage_main_menu(menu_index, main_menu, save_menu, load_menu);
 

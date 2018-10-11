@@ -4,9 +4,9 @@
 #include <vector>
 #include <string>
 
-std::vector<std::string> set_main_menu();
+std::vector<std::string> return_main_menu();
 
-std::vector<std::string> set_save_menu();
+std::vector<std::string> return_save_menu();
 
-std::vector<std::string> set_load_menu();
+std::vector<std::string> return_load_menu();
 #endif 
