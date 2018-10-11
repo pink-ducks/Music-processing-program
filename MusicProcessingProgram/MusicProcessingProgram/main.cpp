@@ -1,10 +1,12 @@
 #include "menu.h"
 #include "set_menu_strings.h"
 #include "menu_actions.h"
-#include "bass.h"
 #include "press_and_save.h"
-
+#include "File_Support.h"
+#include <Windows.h>
+#include <MMSystem.h>
 #include <crtdbg.h>
+#include <string>
 #define _CRTDBG_MAP_ALLOC
 
 struct AtExit
@@ -18,20 +20,9 @@ struct AtExit
 
 int main()
 {
-	int device = -1; // Default Sounddevice
-	int freq = 44100; // Sample rate (Hz)
-	HSTREAM stream_handle; // Handle for open stream
-
-
-	/* Initialize output device */
-	BASS_Init(device, freq, 0, 0, NULL);
-
-	/* Load your soundfile and play it */
-	stream_handle = BASS_StreamCreateFile(FALSE, "your_file.mp3", 0, 0, 0);
-	BASS_ChannelPlay(stream_handle, FALSE);
-
-	/* As very last, close Bass */
- 	BASS_Free(); 
+	std::string file_name = file_path_from_user();
+	PlaySound(TEXT("a.wav"), NULL, SND_SYNC);
+	system("pause");
 	
 	int menu_index = 0;
 	Menu main_menu(set_main_menu());
