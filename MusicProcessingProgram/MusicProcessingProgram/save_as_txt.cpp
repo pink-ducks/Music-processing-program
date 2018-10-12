@@ -1,5 +1,6 @@
-#include "press_and_save.h"
+#include "save_as_txt.h"
 #include "file_support.h"
+#include "display_formatting.h"
 #include <fstream>
 #include <iostream>
 #include <string>
@@ -30,10 +31,11 @@ bool getconchar(KEY_EVENT_RECORD& krec)
 	return false;
 }
 
-void press_and_save_to_file() {
+void press_and_save_to_file(std::string file_path) 
+{
 	KEY_EVENT_RECORD key = { 0, 0, 0, 0, };
 	std::ofstream myfile;
-	std::string file_path = file_path_from_user();
+
 	myfile.open(file_path);
 	if (myfile)
 	{
@@ -56,4 +58,11 @@ void press_and_save_to_file() {
 		std::cout << "Problem with file opening ";
 	}
 	myfile.close();
+}
+
+void save_as_txt()
+{
+	clear_screen();
+	std::string file_path = file_path_from_user();
+	press_and_save_to_file(file_path);
 }
