@@ -1,12 +1,9 @@
 #include "menu.h"
 #include "set_menu_strings.h"
 #include "menu_actions.h"
-#include "press_and_save.h"
-#include "File_Support.h"
-#include <Windows.h>
-#include <MMSystem.h>
-#include <crtdbg.h>
-#include <string>
+#include "music.h"
+#include <iostream>
+
 #define _CRTDBG_MAP_ALLOC
 
 struct AtExit
@@ -21,8 +18,7 @@ struct AtExit
 int main()
 {
 	// playing random music
-	std::cout << " *music*" << std::endl;
-	PlaySound(TEXT("../sounds/a.wav"), NULL, SND_SYNC);
+	play_sound("../sounds/a.wav");
 	
 	// menu
 	int menu_index = 0;

@@ -22,6 +22,9 @@
     <ClCompile Include="file_support.cpp">
       <Filter>pliki .cpp</Filter>
     </ClCompile>
+    <ClCompile Include="music.cpp">
+      <Filter>pliki .cpp</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="display_formatting.h">
@@ -40,6 +43,9 @@
       <Filter>pliki .h</Filter>
     </ClInclude>
     <ClInclude Include="file_support.h">
+      <Filter>pliki .h</Filter>
+    </ClInclude>
+    <ClInclude Include="music.h">
       <Filter>pliki .h</Filter>
     </ClInclude>
   </ItemGroup>

@@ -153,6 +153,7 @@
     <ClCompile Include="main.cpp" />
     <ClCompile Include="menu.cpp" />
     <ClCompile Include="menu_actions.cpp" />
+    <ClCompile Include="music.cpp" />
     <ClCompile Include="press_and_save.cpp" />
     <ClCompile Include="set_menu_strings.cpp" />
   </ItemGroup>
@@ -161,6 +162,7 @@
     <ClInclude Include="file_support.h" />
     <ClInclude Include="menu.h" />
     <ClInclude Include="menu_actions.h" />
+    <ClInclude Include="music.h" />
     <ClInclude Include="press_and_save.h" />
     <ClInclude Include="set_menu_strings.h" />
   </ItemGroup>
