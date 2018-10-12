@@ -18,7 +18,7 @@ struct AtExit
 int main()
 {
 	// playing random music
-	play_sound("../sounds/a.wav");
+	play_sound("../sounds/test.wav");
 	
 	// menu
 	int menu_index = 0;
