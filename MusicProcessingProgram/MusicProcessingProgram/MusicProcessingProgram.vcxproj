@@ -148,22 +148,24 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="communication.cpp" />
     <ClCompile Include="display_formatting.cpp" />
     <ClCompile Include="file_support.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="menu.cpp" />
     <ClCompile Include="menu_actions.cpp" />
     <ClCompile Include="music.cpp" />
-    <ClCompile Include="press_and_save.cpp" />
+    <ClCompile Include="save_as_txt.cpp" />
     <ClCompile Include="set_menu_strings.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="communication.h" />
     <ClInclude Include="display_formatting.h" />
     <ClInclude Include="file_support.h" />
     <ClInclude Include="menu.h" />
     <ClInclude Include="menu_actions.h" />
     <ClInclude Include="music.h" />
-    <ClInclude Include="press_and_save.h" />
+    <ClInclude Include="save_as_txt.h" />
     <ClInclude Include="set_menu_strings.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

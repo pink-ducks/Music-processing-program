@@ -13,9 +13,6 @@
     <ClCompile Include="menu_actions.cpp">
       <Filter>pliki .cpp</Filter>
     </ClCompile>
-    <ClCompile Include="press_and_save.cpp">
-      <Filter>pliki .cpp</Filter>
-    </ClCompile>
     <ClCompile Include="set_menu_strings.cpp">
       <Filter>pliki .cpp</Filter>
     </ClCompile>
@@ -25,15 +22,18 @@
     <ClCompile Include="music.cpp">
       <Filter>pliki .cpp</Filter>
     </ClCompile>
+    <ClCompile Include="communication.cpp">
+      <Filter>pliki .cpp</Filter>
+    </ClCompile>
+    <ClCompile Include="save_as_txt.cpp">
+      <Filter>pliki .cpp</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="display_formatting.h">
       <Filter>pliki .h</Filter>
     </ClInclude>
     <ClInclude Include="menu_actions.h">
-      <Filter>pliki .h</Filter>
-    </ClInclude>
-    <ClInclude Include="press_and_save.h">
       <Filter>pliki .h</Filter>
     </ClInclude>
     <ClInclude Include="set_menu_strings.h">
@@ -46,6 +46,12 @@
       <Filter>pliki .h</Filter>
     </ClInclude>
     <ClInclude Include="music.h">
+      <Filter>pliki .h</Filter>
+    </ClInclude>
+    <ClInclude Include="communication.h">
+      <Filter>pliki .h</Filter>
+    </ClInclude>
+    <ClInclude Include="save_as_txt.h">
       <Filter>pliki .h</Filter>
     </ClInclude>
   </ItemGroup>
