@@ -13,7 +13,7 @@ void Menu::set_index(int index)
 	this->index = index;
 }
 
-int Menu::get_index()
+int Menu::get_index() const
 {
 	return index;
 }
@@ -40,7 +40,7 @@ void Menu::move_arrow()
 	}
 }
 
-void Menu::show()
+void Menu::show() const
 {
 	upper_space();
 	for (auto i = options.begin(); i != options.end(); ++i)

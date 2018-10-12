@@ -18,10 +18,10 @@ class Menu
 		void set_vector(std::vector<std::string>);
 		void set_index(int);
 
-		int get_index();
+		int get_index() const;
 
 		void move_arrow();
-		void show();
+		void show() const;
 		~Menu() {};
 };
 
