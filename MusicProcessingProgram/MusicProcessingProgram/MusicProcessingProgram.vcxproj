@@ -166,9 +166,6 @@
     <ClInclude Include="press_and_save.h" />
     <ClInclude Include="set_menu_strings.h" />
   </ItemGroup>
-  <ItemGroup>
-    <Library Include="bass.lib" />
-  </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
   </ImportGroup>

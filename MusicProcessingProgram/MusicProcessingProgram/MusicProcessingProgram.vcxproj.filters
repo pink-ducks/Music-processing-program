@@ -50,9 +50,6 @@
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
-    <Library Include="bass.lib" />
-  </ItemGroup>
-  <ItemGroup>
     <Filter Include="pliki .cpp">
       <UniqueIdentifier>{51235ac7-d11b-454a-b127-5ea3beb38cfd}</UniqueIdentifier>
     </Filter>
