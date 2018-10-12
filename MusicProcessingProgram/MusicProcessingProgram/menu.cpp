@@ -18,6 +18,11 @@ int Menu::get_index() const
 	return index;
 }
 
+std::vector<std::string> Menu::get_vector() const
+{
+	return options;
+}
+
 void Menu::move_arrow()
 {
 	if (GetAsyncKeyState(VK_UP))

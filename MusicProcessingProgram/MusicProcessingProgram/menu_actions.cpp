@@ -1,85 +1,111 @@
 #include "menu_actions.h"
 #include "menu.h"
-#include "press_and_save.h"
+#include "save_as_txt.h"
 #include "display_formatting.h"
+#include "set_menu_strings.h"
 
-int select_menu_action(Menu menu_object)
+bool is_escape(const KEY_EVENT_RECORD key)
 {
-	KEY_EVENT_RECORD key = { 0, 0, 0, 0, };
-	int current_index = 0;
-
-	do
+	bool escape_clicked = true;
+	if (key.wVirtualKeyCode == VK_ESCAPE)
 	{
-		clear_screen();
-		menu_object.show();
-		getconchar(key);
-		menu_object.move_arrow();
-		current_index = menu_object.get_index();
-		if (key.wVirtualKeyCode == VK_ESCAPE)
-		{
-			current_index = 2;
-			break;
-		}
-	} while (key.wVirtualKeyCode != VK_RETURN && key.wVirtualKeyCode != VK_SPACE);
-
-	clear_screen();
-
-	return current_index;
-}
-
-int run_menu(Menu & menu)
-{
-	int action_index = 0;
-	action_index = select_menu_action(menu);
-	std::cout << std::endl << " action: " << action_index;
-
-	return action_index;
-}
-
-void manage_main_menu(int index, Menu & main_menu, Menu & save_menu, Menu & load_menu) // Menu & load_menu to add
-{
-	if (index == 0)
-	{
-		index = run_menu(save_menu);
-		manage_save_menu(index, main_menu, save_menu, load_menu);
-	}
-	else if (index == 1)
-	{
-		index = run_menu(load_menu);
-		manage_load_menu(index, main_menu, save_menu, load_menu);
-	}
-}
-
-void manage_save_menu(int index, Menu & main_menu, Menu & save_menu, Menu & load_menu)
-{
-	if (index == 0)
-	{
-		// save ass .mp3
-	}
-	else if (index == 1)
-	{
-		press_and_save_to_file();
+		escape_clicked = true;
 	}
 	else
 	{
-		index = run_menu(main_menu);
-		manage_main_menu(index, main_menu, save_menu, load_menu);
+		escape_clicked = false;
 	}
+	return escape_clicked;
 }
 
-void manage_load_menu(int index, Menu & main_menu, Menu & save_menu, Menu & load_menu)
+bool go_from_main_menu(Menu & menu)
 {
-	if (index == 0)
+	bool is_entered = true;
+	if (menu.get_index() == 0 && menu.get_vector()[0] == "> Create new sounds!")
+	{
+		menu.set_vector(return_save_menu());
+	}
+	else
+	if (menu.get_index() == 1 && menu.get_vector()[1] == "> Play music from a file")
+	{
+		menu.set_vector(return_load_menu());
+	}
+	else
+	if (menu.get_index() == 2 && menu.get_vector()[2] == "> Quit :(")
+	{
+		is_entered = false;
+	}
+	return is_entered;
+}
+
+bool go_from_save_menu(Menu & menu)
+{
+	bool is_choosed = false;
+	if (menu.get_index() == 0 && menu.get_vector()[0] == "> Save as .mp3")
+	{
+		// save as .mp3
+	}
+	else
+	if (menu.get_index() == 1 && menu.get_vector()[1] == "> Save as .txt")
+	{
+		save_as_txt();
+		is_choosed = true;
+	}
+	else
+	if (menu.get_index() == 2 && menu.get_vector()[2] == "> Back")
+	{
+		menu.set_vector(return_main_menu());
+	}
+	return is_choosed;
+}
+
+bool go_from_load_menu(Menu & menu)
+{
+	bool is_choosed = false;
+	if (menu.get_index() == 0 && menu.get_vector()[0] == "> Load from .mp3")
 	{
 		// load from .mp3
 	}
-	else if (index == 1)
+	else
+	if (menu.get_index() == 1 && menu.get_vector()[1] == "> Load from .txt")
 	{
-		//press_and_load_from_file();
+		// load from .txt
 	}
 	else
+	if (menu.get_index() == 2 && menu.get_vector()[2] == "> Back")
 	{
-		index = run_menu(main_menu);
-		manage_main_menu(index, main_menu, save_menu, load_menu);
+		menu.set_vector(return_main_menu());
 	}
+	return is_choosed;
+}
+
+void run_menu(Menu & menu)
+{
+	KEY_EVENT_RECORD key = { 0, 0, 0, 0, };
+	menu.set_vector(return_main_menu());
+	
+	do
+	{
+		menu.set_index(0);
+		do
+		{
+			clear_screen();
+			menu.show();
+			getconchar(key);
+			menu.move_arrow();
+
+		} while (key.wVirtualKeyCode != VK_RETURN && key.wVirtualKeyCode != VK_SPACE && key.wVirtualKeyCode != VK_ESCAPE);
+		if (!go_from_main_menu(menu) || key.wVirtualKeyCode == VK_ESCAPE)
+		{
+			break;
+		}
+		else
+		{
+			if (go_from_save_menu(menu))
+				break;
+			if (go_from_load_menu(menu))
+				break;
+		}
+
+	} while (!is_escape(key));
 }
