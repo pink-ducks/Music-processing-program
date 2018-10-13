@@ -1,9 +1,11 @@
 #include "save_as_txt.h"
 #include "file_support.h"
 #include "display_formatting.h"
+#include "create_music.h"
 #include <fstream>
 #include <iostream>
 #include <string>
+#include <vector>
 #include <Windows.h>
 
 bool getconchar(KEY_EVENT_RECORD& krec)
@@ -31,38 +33,32 @@ bool getconchar(KEY_EVENT_RECORD& krec)
 	return false;
 }
 
-void press_and_save_to_file(std::string file_path) 
+void save_as_txt()
 {
-	KEY_EVENT_RECORD key = { 0, 0, 0, 0, };
+	std::vector<char> keys;
+	std::string file_path;
+	clear_screen();
+
+	save_to_vector(keys);
+	file_path = file_path_from_user();
+	save_to_file(keys, file_path);
+}
+
+void save_to_file(const std::vector<char> keys, const std::string file_path)
+{
 	std::ofstream myfile;
 
 	myfile.open(file_path);
 	if (myfile)
 	{
-		std::cout << " Play music on your keyboard! " << std::endl;
-		std::cout << " If you're done, press ENTER " << std::endl;
-		do
+		for (auto i = keys.begin(); i != keys.end(); ++i)
 		{
-			getconchar(key);
-			if (key.wVirtualKeyCode != VK_RETURN) {
-				std::cout << "You pressed and saved to file : " << key.uChar.AsciiChar << std::endl;
-				myfile << key.uChar.AsciiChar;
-			}
-			if (key.wVirtualKeyCode == VK_RETURN) {
-				std::cout << std::endl << "Your music is saved in your file!" << std::endl;
-			}
-		} while (key.wVirtualKeyCode != VK_RETURN);
+			myfile << *i << " ";
+		}
 	}
 	else
 	{
 		std::cout << "Problem with file opening ";
 	}
 	myfile.close();
-}
-
-void save_as_txt()
-{
-	clear_screen();
-	std::string file_path = file_path_from_user();
-	press_and_save_to_file(file_path);
 }

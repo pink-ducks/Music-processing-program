@@ -19,13 +19,16 @@
     <ClCompile Include="file_support.cpp">
       <Filter>pliki .cpp</Filter>
     </ClCompile>
-    <ClCompile Include="music.cpp">
-      <Filter>pliki .cpp</Filter>
-    </ClCompile>
     <ClCompile Include="communication.cpp">
       <Filter>pliki .cpp</Filter>
     </ClCompile>
     <ClCompile Include="save_as_txt.cpp">
+      <Filter>pliki .cpp</Filter>
+    </ClCompile>
+    <ClCompile Include="play_music.cpp">
+      <Filter>pliki .cpp</Filter>
+    </ClCompile>
+    <ClCompile Include="create_music.cpp">
       <Filter>pliki .cpp</Filter>
     </ClCompile>
   </ItemGroup>
@@ -45,13 +48,16 @@
     <ClInclude Include="file_support.h">
       <Filter>pliki .h</Filter>
     </ClInclude>
-    <ClInclude Include="music.h">
-      <Filter>pliki .h</Filter>
-    </ClInclude>
     <ClInclude Include="communication.h">
       <Filter>pliki .h</Filter>
     </ClInclude>
     <ClInclude Include="save_as_txt.h">
+      <Filter>pliki .h</Filter>
+    </ClInclude>
+    <ClInclude Include="play_music.h">
+      <Filter>pliki .h</Filter>
+    </ClInclude>
+    <ClInclude Include="create_music.h">
       <Filter>pliki .h</Filter>
     </ClInclude>
   </ItemGroup>
