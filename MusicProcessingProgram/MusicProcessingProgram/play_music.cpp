@@ -40,6 +40,54 @@ std::string find_sound(const char key)
 	case 'p':
 		sound_path = "../../Sounds/Cupboard_Door.wav";
 		break;
+	case 'a':
+		sound_path = "../../Sounds/Deck_of_Cards_on_Table.wav";
+		break;
+	case 's':
+		sound_path = "../../Sounds/Drill_Gear.wav";
+		break;
+	case 'd':
+		sound_path = "../../Sounds/Dumpster_Door_Hit.wav";
+		break;
+	case 'f':
+		sound_path = "../../Sounds/Football_Kick_In_Grass.wav";
+		break;
+	case 'g':
+		sound_path = "../../Sounds/Football_Punts.wav";
+		break;
+	case 'h':
+		sound_path = "../../Sounds/Footstep_on_Cracked_Glass.wav";
+		break;
+	case 'j':
+		sound_path = "../../Sounds/Instrument_Strum.wav";
+		break;
+	case 'k':
+		sound_path = "../../Sounds/Machine_Gun_hit_Car.wav";
+		break;
+	case 'l':
+		sound_path = "../../Sounds/Metal_Strike.wav";
+		break;
+	case 'z':
+		sound_path = "../../Sounds/Metal_Twang.wav";
+		break;
+	case 'x':
+		sound_path = "../../Sounds/Metallic_Clank.wav";
+		break;
+	case 'c':
+		sound_path = "../../Sounds/Object_Toss_and_Smash.wav";
+		break;
+	case 'v':
+		sound_path = "../../Sounds/Power_Tool_Electrical_Buzz.wav";
+		break;
+	case 'b':
+		sound_path = "../../Sounds/Ratchet_Wrench_Slow.wav";
+		break;
+	case 'n':
+		sound_path = "../../Sounds/Slapping_Three_Faces.wav";
+		break;
+	case 'm':
+		sound_path = "../../Sounds/Wood_Plank_Flicks.wav";
+		break;
 	default:
 		sound_path = "../../Sounds/Woodpecker.wav";
 		break;
