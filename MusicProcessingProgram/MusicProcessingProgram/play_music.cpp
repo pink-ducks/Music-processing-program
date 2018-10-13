@@ -3,6 +3,7 @@
 #include <Windows.h>
 #include <MMSystem.h>
 #include <crtdbg.h>
+#include <vector>
 
 std::string find_sound(const char key)
 {
@@ -45,4 +46,13 @@ void play_sound(const char key)
 		std::cout << " *error*" << std::endl;
 	}
 
+}
+
+void play_users_music(std::vector<char> keys) 
+{
+
+	for (auto i = keys.begin(); i != keys.end(); ++i)
+	{
+		play_sound(*i);
+	}
 }

@@ -2,6 +2,7 @@
 #include "file_support.h"
 #include "display_formatting.h"
 #include "create_music.h"
+#include "play_music.h"
 #include <fstream>
 #include <iostream>
 #include <string>
@@ -40,6 +41,7 @@ void save_as_txt()
 	clear_screen();
 
 	save_to_vector(keys);
+	play_users_music(keys);
 	file_name = file_name_from_user();
 	save_to_file(keys, file_name);
 }
