@@ -1,5 +1,6 @@
 #include "create_music.h"
 #include "save_as_txt.h"
+#include "play_music.h"
 #include <iostream>
 #include <Windows.h>
 
@@ -13,6 +14,7 @@ void save_to_vector(std::vector<char> & keys)
 		getconchar(key);
 		if (key.wVirtualKeyCode != VK_RETURN) {
 			std::cout << "You pressed " << key.uChar.AsciiChar << std::endl;
+			play_sound(key.uChar.AsciiChar);
 			keys.push_back(key.uChar.AsciiChar);
 		}
 		if (key.wVirtualKeyCode == VK_RETURN) {

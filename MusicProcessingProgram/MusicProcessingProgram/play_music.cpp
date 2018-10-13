@@ -18,6 +18,9 @@ std::string find_sound(const char key)
 	case 'e':
 		sound_path = "../../Sounds/Bee_Buzz.wav";
 		break;
+	case 'r':
+		sound_path = "../../Sounds/Beep_Short.wav";
+		break;
 	default:
 		break;
 	}
