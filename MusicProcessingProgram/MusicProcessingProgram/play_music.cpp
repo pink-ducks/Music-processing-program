@@ -11,46 +11,46 @@ std::string find_sound(const char key)
 	switch (key)
 	{
 	case 'q':
-		sound_path = "../../Sounds/18V_Cordless_Drill_Switch.wav";
+		sound_path = "../../Sounds/2.6_6.wav";
 		break;
 	case 'w':
-		sound_path = "../../Sounds/Auto_Bullets_Flyby_Short.wav";
+		sound_path = "../../Sounds/2.7_7.wav";
 		break;
 	case 'e':
-		sound_path = "../../Sounds/Bee_Buzz.wav";
+		sound_path = "../../Sounds/2.8_8.wav";
 		break;
 	case 'r':
-		sound_path = "../../Sounds/Beep_Short.wav";
+		sound_path = "../../Sounds/1.5_5.wav";
 		break;
 	case 't':
-		sound_path = "../../Sounds/Big_Explosion_Cut_Off.wav";
+		sound_path = "../../Sounds/2.9_9.wav";
 		break;
 	case 'y':
-		sound_path = "../../Sounds/Billiard_Balls_Hit.wav";
+		sound_path = "../../Sounds/1.7_7.wav";
 		break;
 	case 'u':
-		sound_path = "../../Sounds/Cartoon_Boing.wav";
+		sound_path = "../../Sounds/1.10_10.wav";
 		break;
 	case 'i':
-		sound_path = "../../Sounds/Cat_Purr_Close.wav";
+		sound_path = "../../Sounds/1.8_8.wav";
 		break;
 	case 'o':
-		sound_path = "../../Sounds/Crash.wav";
+		sound_path = "../../Sounds/2.10_10.wav";
 		break;
 	case 'p':
-		sound_path = "../../Sounds/Cupboard_Door.wav";
+		sound_path = "../../Sounds/3.9_9.wav";
 		break;
 	case 'a':
-		sound_path = "../../Sounds/Deck_of_Cards_on_Table.wav";
+		sound_path = "../../Sounds/4.11_11.wav";
 		break;
 	case 's':
-		sound_path = "../../Sounds/Drill_Gear.wav";
+		sound_path = "../../Sounds/1.11_11.wav";
 		break;
 	case 'd':
-		sound_path = "../../Sounds/Dumpster_Door_Hit.wav";
+		sound_path = "../../Sounds/1.11.2_2.wav";
 		break;
 	case 'f':
-		sound_path = "../../Sounds/Football_Kick_In_Grass.wav";
+		sound_path = "../../Sounds/1.9_9.wav";
 		break;
 	case 'g':
 		sound_path = "../../Sounds/Football_Punts.wav";
