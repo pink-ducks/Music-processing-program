@@ -36,19 +36,19 @@ bool getconchar(KEY_EVENT_RECORD& krec)
 void save_as_txt()
 {
 	std::vector<char> keys;
-	std::string file_path;
+	std::string file_name;
 	clear_screen();
 
 	save_to_vector(keys);
-	file_path = file_path_from_user();
-	save_to_file(keys, file_path);
+	file_name = file_name_from_user();
+	save_to_file(keys, file_name);
 }
 
-void save_to_file(const std::vector<char> keys, const std::string file_path)
+void save_to_file(const std::vector<char> keys, const std::string file_name)
 {
 	std::ofstream myfile;
 
-	myfile.open(file_path);
+	myfile.open("../../UserMusic/" + file_name);
 	if (myfile)
 	{
 		for (auto i = keys.begin(); i != keys.end(); ++i)
