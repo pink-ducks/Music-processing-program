@@ -13,14 +13,24 @@ void Menu::set_index(int index)
 	this->index = index;
 }
 
-int Menu::get_index() const
+void Menu::set_menu_type(menu_type type)
 {
-	return index;
+	this->type = type;
 }
 
 std::vector<std::string> Menu::get_vector() const
 {
 	return options;
+}
+
+int Menu::get_index() const
+{
+	return index;
+}
+
+menu_type Menu::get_menu_type() const
+{
+	return type;
 }
 
 void Menu::move_arrow()
