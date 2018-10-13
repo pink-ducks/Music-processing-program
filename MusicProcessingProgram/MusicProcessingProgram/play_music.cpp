@@ -22,7 +22,26 @@ std::string find_sound(const char key)
 	case 'r':
 		sound_path = "../../Sounds/Beep_Short.wav";
 		break;
+	case 't':
+		sound_path = "../../Sounds/Big_Explosion_Cut_Off.wav";
+		break;
+	case 'y':
+		sound_path = "../../Sounds/Billiard_Balls_Hit.wav";
+		break;
+	case 'u':
+		sound_path = "../../Sounds/Cartoon_Boing.wav";
+		break;
+	case 'i':
+		sound_path = "../../Sounds/Cat_Purr_Close.wav";
+		break;
+	case 'o':
+		sound_path = "../../Sounds/Crash.wav";
+		break;
+	case 'p':
+		sound_path = "../../Sounds/Cupboard_Door.wav";
+		break;
 	default:
+		sound_path = "../../Sounds/Woodpecker.wav";
 		break;
 	}
 	return sound_path;
@@ -38,7 +57,6 @@ void play_sound(const char key)
 		std::wstring stemp = std::wstring(sound_path.begin(), sound_path.end());
 		LPCWSTR path = stemp.c_str();
 
-		std::cout << " *music*" << std::endl;
 		PlaySound(path, NULL, SND_SYNC);
 	}
 	else
