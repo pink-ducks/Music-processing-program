@@ -5,11 +5,17 @@
 
 bool is_escape(const KEY_EVENT_RECORD key);
 
-bool go_from_main_menu(Menu & menu);
+bool is_finished(const menu_type current_type, const Menu menu);
 
-bool go_from_save_menu(Menu & menu);
+void main_menu_action(Menu & menu, KEY_EVENT_RECORD & key);
 
-bool go_from_load_menu(Menu & menu);
+void save_menu_action(Menu & menu);
+
+void load_menu_action(Menu & menu);
+
+void switch_menu(menu_type & current_type, Menu & menu, KEY_EVENT_RECORD & key);
+
+void choose_action(Menu & menu, KEY_EVENT_RECORD & key);
 
 void run_menu(Menu & menu);
 

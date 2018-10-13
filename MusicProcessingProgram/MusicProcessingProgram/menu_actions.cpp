@@ -18,65 +18,105 @@ bool is_escape(const KEY_EVENT_RECORD key)
 	return escape_clicked;
 }
 
-bool go_from_main_menu(Menu & menu)
+bool is_finished(const menu_type current_type, const Menu menu)
 {
-	bool is_entered = true;
-	if (menu.get_index() == 0 && menu.get_vector()[0] == "> Create new sounds!")
+	bool is_finished = false;
+	if (current_type == SAVE || current_type == LOAD)
 	{
+		if (menu.get_index() == 0 || menu.get_index() == 1)
+		{
+			is_finished = true;
+		}
+	}
+	return is_finished;
+}
+
+void main_menu_action(Menu & menu, KEY_EVENT_RECORD & key)
+{
+	switch (menu.get_index())
+	{
+	case 0:
 		menu.set_vector(return_save_menu());
-	}
-	else
-	if (menu.get_index() == 1 && menu.get_vector()[1] == "> Play music from a file")
-	{
+		menu.set_menu_type(SAVE);
+		break;
+	case 1:
 		menu.set_vector(return_load_menu());
+		menu.set_menu_type(LOAD);
+		break;
+	case 2:
+		key.wVirtualKeyCode = VK_ESCAPE;
+		break;
+	default:
+		break;
 	}
-	else
-	if (menu.get_index() == 2 && menu.get_vector()[2] == "> Quit :(")
-	{
-		is_entered = false;
-	}
-	return is_entered;
 }
 
-bool go_from_save_menu(Menu & menu)
+void save_menu_action(Menu & menu)
 {
-	bool is_choosed = false;
-	if (menu.get_index() == 0 && menu.get_vector()[0] == "> Save as .mp3")
+	switch (menu.get_index())
 	{
+	case 0:
 		// save as .mp3
-	}
-	else
-	if (menu.get_index() == 1 && menu.get_vector()[1] == "> Save as .txt")
-	{
+		break;
+	case 1:
 		save_as_txt();
-		is_choosed = true;
-	}
-	else
-	if (menu.get_index() == 2 && menu.get_vector()[2] == "> Back")
-	{
+		break;
+	case 2:
 		menu.set_vector(return_main_menu());
+		menu.set_menu_type(MAIN);
+		break;
+	default:
+		break;
 	}
-	return is_choosed;
 }
 
-bool go_from_load_menu(Menu & menu)
+void load_menu_action(Menu & menu)
 {
-	bool is_choosed = false;
-	if (menu.get_index() == 0 && menu.get_vector()[0] == "> Load from .mp3")
+	switch (menu.get_index())
 	{
+	case 0:
 		// load from .mp3
-	}
-	else
-	if (menu.get_index() == 1 && menu.get_vector()[1] == "> Load from .txt")
-	{
+		break;
+	case 1:
 		// load from .txt
-	}
-	else
-	if (menu.get_index() == 2 && menu.get_vector()[2] == "> Back")
-	{
+		break;
+	case 2:
 		menu.set_vector(return_main_menu());
+		menu.set_menu_type(MAIN);
+		break;
+	default:
+		break;
 	}
-	return is_choosed;
+}
+
+void switch_menu(menu_type & current_type, Menu & menu, KEY_EVENT_RECORD & key)
+{
+	switch (current_type)
+	{
+	case MAIN:
+		main_menu_action(menu, key);
+		break;
+	case SAVE:
+		save_menu_action(menu);
+		break;
+	case LOAD:
+		load_menu_action(menu);
+		break;
+	default:
+		break;
+	}
+}
+
+void choose_action(Menu & menu, KEY_EVENT_RECORD & key)
+{
+	do
+	{
+		clear_screen();
+		menu.show();
+		getconchar(key);
+		menu.move_arrow();
+
+	} while (key.wVirtualKeyCode != VK_RETURN && key.wVirtualKeyCode != VK_SPACE && key.wVirtualKeyCode != VK_ESCAPE);
 }
 
 void run_menu(Menu & menu)
@@ -87,25 +127,13 @@ void run_menu(Menu & menu)
 	do
 	{
 		menu.set_index(0);
-		do
-		{
-			clear_screen();
-			menu.show();
-			getconchar(key);
-			menu.move_arrow();
+		menu_type current_type = menu.get_menu_type();
 
-		} while (key.wVirtualKeyCode != VK_RETURN && key.wVirtualKeyCode != VK_SPACE && key.wVirtualKeyCode != VK_ESCAPE);
-		if (!go_from_main_menu(menu) || key.wVirtualKeyCode == VK_ESCAPE)
-		{
+		choose_action(menu, key);
+		switch_menu(current_type, menu, key);
+	
+		if (is_finished(current_type, menu))
 			break;
-		}
-		else
-		{
-			if (go_from_save_menu(menu))
-				break;
-			if (go_from_load_menu(menu))
-				break;
-		}
 
 	} while (!is_escape(key));
 }
