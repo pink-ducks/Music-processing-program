@@ -2,6 +2,8 @@
 #define PLAY_MUSIC_H
 #include <string>
 
-void play_sound(const std::string sound_path);
+std::string find_sound(const char key);
+
+void play_sound(const char key);
 
 #endif 

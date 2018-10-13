@@ -17,7 +17,11 @@ struct AtExit
 int main()
 {
 	// playing random music
-	play_sound("../../Sounds/crash.wav"); // delete this line with include "music.h" after playing sounds in other functions
+	play_sound('q');
+	play_sound('w');
+	play_sound('e');
+
+	// delete lines with include "play_music.h" after playing sounds in other functions
 	
 	Menu menu;
 	run_menu(menu);
