@@ -158,6 +158,7 @@
     <ClCompile Include="play_music.cpp" />
     <ClCompile Include="save_as_txt.cpp" />
     <ClCompile Include="set_menu_strings.cpp" />
+    <ClCompile Include="Wav_File_Support.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="communication.h" />
@@ -169,6 +170,7 @@
     <ClInclude Include="play_music.h" />
     <ClInclude Include="save_as_txt.h" />
     <ClInclude Include="set_menu_strings.h" />
+    <ClInclude Include="Wav_File_Support.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
