@@ -1,7 +1,7 @@
+#include "Wav_File_Support.h"
 #include <iostream>
 #include <string>
 #include <fstream>
-#include "Wav_File_Support.h"
 
 void load_Wave_File(char *fname, WavData *ret) {
 

@@ -95,15 +95,16 @@ std::string find_sound(const char key)
 	return sound_path;
 }
 
+
 void play_sound(const char key)
 {
 	std::string sound_path;
 	sound_path = find_sound(key);
 	if (sound_path.size() != 0)
 	{
-		// converting std::string to LPCWSTR
-		std::wstring stemp = std::wstring(sound_path.begin(), sound_path.end());
-		LPCWSTR path = stemp.c_str();
+		// converting std::string to LPCSTR
+		std::string stemp = std::string(sound_path.begin(), sound_path.end());
+		LPCSTR path = stemp.c_str();
 
 		PlaySound(path, NULL, SND_SYNC);
 	}
@@ -113,6 +114,8 @@ void play_sound(const char key)
 	}
 
 }
+
+
 
 void play_users_music(std::vector<char> keys) 
 {
