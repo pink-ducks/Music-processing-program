@@ -115,7 +115,24 @@ void play_sound(const char key)
 
 }
 
+void play_music(const std::string file_name)
+{
+	std::string music_path;
+	music_path = "../../UserMusic/" + file_name;
+	if (file_name.size() != 0)
+	{
+		// converting std::string to LPCSTR
+		std::string stemp = std::string(music_path.begin(), music_path.end());
+		LPCSTR path = stemp.c_str();
 
+		PlaySound(path, NULL, SND_SYNC);
+	}
+	else
+	{
+		std::cout << " *error*" << std::endl;
+	}
+
+}
 
 void play_users_music(std::vector<char> keys) 
 {
