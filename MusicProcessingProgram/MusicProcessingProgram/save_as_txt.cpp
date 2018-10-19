@@ -55,7 +55,7 @@ void save_to_file(const std::vector<char> keys, const std::string file_name)
 	{
 		for (auto i = keys.begin(); i != keys.end(); ++i)
 		{
-			myfile << *i << " ";
+			myfile << *i;
 		}
 	}
 	else

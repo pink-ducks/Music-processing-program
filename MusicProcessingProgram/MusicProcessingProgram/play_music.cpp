@@ -89,7 +89,7 @@ std::string find_sound(const char key)
 		sound_path = "../../Sounds/Wood_Plank_Flicks.wav";
 		break;
 	default:
-		sound_path = "../../Sounds/Woodpecker.wav";
+		sound_path = "../../Sounds/silence.wav";
 		break;
 	}
 	return sound_path;
