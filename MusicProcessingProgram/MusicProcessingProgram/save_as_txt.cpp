@@ -64,3 +64,21 @@ void save_to_file(const std::vector<char> keys, const std::string file_name)
 	}
 	myfile.close();
 }
+void read_from_file(const std::string file_name)
+{
+	std::ifstream myfile;
+	myfile.open("../../UserMusic/" + file_name); 
+	if (myfile)
+	{
+		char c;
+		while (myfile.get(c))
+		{
+			play_sound(c);
+		}
+	}
+	else
+	{
+		std::cout << "unable to open file" << std::endl;
+	}
+	myfile.close();
+}
