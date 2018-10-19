@@ -3,6 +3,8 @@
 #include "save_as_txt.h"
 #include "display_formatting.h"
 #include "set_menu_strings.h"
+#include "file_support.h"
+#include "play_music.h"
 
 bool is_escape(const KEY_EVENT_RECORD key)
 {
@@ -72,13 +74,14 @@ void save_menu_action(Menu & menu)
 
 void load_menu_action(Menu & menu)
 {
+	std::string file_name;
 	switch (menu.get_index())
 	{
 	case 0:
-		// load from .mp3
+		file_name = file_name_from_user();
+		play_music(file_name);
 		break;
 	case 1:
-		// load from .txt
 		load_from_file();
 		break;
 	case 2:
