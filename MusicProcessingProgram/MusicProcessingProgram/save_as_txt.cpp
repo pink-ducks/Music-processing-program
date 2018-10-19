@@ -82,3 +82,10 @@ void read_from_file(const std::string file_name)
 	}
 	myfile.close();
 }
+void load_from_file()
+{
+	std::string file_name;
+	clear_screen();
+	file_name = file_name_from_user();
+	read_from_file(file_name);
+}

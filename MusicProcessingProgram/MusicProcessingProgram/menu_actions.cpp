@@ -79,6 +79,7 @@ void load_menu_action(Menu & menu)
 		break;
 	case 1:
 		// load from .txt
+		load_from_file();
 		break;
 	case 2:
 		menu.set_vector(return_main_menu());
