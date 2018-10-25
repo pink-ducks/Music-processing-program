@@ -125,11 +125,15 @@ void play_music(const std::string file_name)
 		std::string stemp = std::string(music_path.begin(), music_path.end());
 		LPCSTR path = stemp.c_str();
 
-		PlaySound(path, NULL, SND_SYNC);
+		auto play_sound = PlaySound(path, NULL, SND_SYNC);
+		if (!play_sound)
+		{
+			std::cout << " ERROR: there's no " << file_name << " in your music folder" << std::endl;
+		}
 	}
 	else
 	{
-		std::cout << " *error*" << std::endl;
+		std::cout << " ERROR: file name is empty!" << std::endl;
 	}
 
 }

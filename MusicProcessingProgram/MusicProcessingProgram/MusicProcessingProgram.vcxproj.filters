@@ -34,6 +34,9 @@
     <ClCompile Include="Wav_File_Support.cpp">
       <Filter>pliki .cpp</Filter>
     </ClCompile>
+    <ClCompile Include="load_music.cpp">
+      <Filter>pliki .cpp</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="display_formatting.h">
@@ -64,6 +67,9 @@
       <Filter>pliki .h</Filter>
     </ClInclude>
     <ClInclude Include="Wav_File_Support.h">
+      <Filter>pliki .h</Filter>
+    </ClInclude>
+    <ClInclude Include="load_music.h">
       <Filter>pliki .h</Filter>
     </ClInclude>
   </ItemGroup>
