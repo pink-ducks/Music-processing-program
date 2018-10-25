@@ -5,6 +5,7 @@
 #include "set_menu_strings.h"
 #include "file_support.h"
 #include "play_music.h"
+#include "load_music.h"
 
 bool is_escape(const KEY_EVENT_RECORD key)
 {
@@ -77,12 +78,13 @@ void load_menu_action(Menu & menu)
 	std::string file_name;
 	switch (menu.get_index())
 	{
-	case 0:
-		file_name = file_name_from_user();
+	case 0: 
+		file_name = file_name_from_user(WAV);
 		play_music(file_name);
 		break;
 	case 1:
-		load_from_file();
+		file_name = file_name_from_user(TXT);
+		play_from_file(file_name);
 		break;
 	case 2:
 		menu.set_vector(return_main_menu());

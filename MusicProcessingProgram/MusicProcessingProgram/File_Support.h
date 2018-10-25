@@ -2,6 +2,10 @@
 #define FILE_SUPPORT
 #include <string>
 
-const std::string file_name_from_user();
+enum file_type {
+	WAV, TXT
+};
+
+const std::string file_name_from_user(file_type type);
 
 #endif
