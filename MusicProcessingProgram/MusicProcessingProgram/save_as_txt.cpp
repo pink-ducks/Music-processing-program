@@ -42,7 +42,7 @@ void save_as_txt()
 
 	save_to_vector(keys);
 	play_users_music(keys);
-	file_name = file_name_from_user();
+	file_name = file_name_from_user(TXT);
 	save_to_file(keys, file_name);
 }
 
@@ -63,29 +63,4 @@ void save_to_file(const std::vector<char> keys, const std::string file_name)
 		std::cout << "Problem with file opening ";
 	}
 	myfile.close();
-}
-void read_from_file(const std::string file_name)
-{
-	std::ifstream myfile;
-	myfile.open("../../UserMusic/" + file_name); 
-	if (myfile)
-	{
-		char c;
-		while (myfile.get(c))
-		{
-			play_sound(c);
-		}
-	}
-	else
-	{
-		std::cout << "unable to open file" << std::endl;
-	}
-	myfile.close();
-}
-void load_from_file()
-{
-	std::string file_name;
-	clear_screen();
-	file_name = file_name_from_user();
-	read_from_file(file_name);
 }

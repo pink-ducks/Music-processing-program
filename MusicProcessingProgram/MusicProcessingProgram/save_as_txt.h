@@ -9,8 +9,4 @@ void save_as_txt();
 
 void save_to_file(const std::vector<char> keys, const std::string file_path);
 
-void read_from_file(const std::string file_name);
-
-void load_from_file();
-
 #endif
