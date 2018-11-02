@@ -5,5 +5,5 @@
 void say_goodbye()
 {
 	clear_screen();
-	std::cout << std::endl << " Bye!";
+	std::cout << std::endl << "Bye!" << std::endl;;
 }

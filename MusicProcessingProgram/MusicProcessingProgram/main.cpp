@@ -1,7 +1,6 @@
 #include "menu.h"
 #include "menu_actions.h"
 #include "communication.h"
-
 #define _CRTDBG_MAP_ALLOC
 
 struct AtExit
