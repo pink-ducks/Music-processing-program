@@ -1,7 +1,6 @@
 #include "play_music.h"
 #include <iostream>
 #include <Windows.h>
-#include <MMSystem.h>
 #include <crtdbg.h>
 #include <vector>
 
