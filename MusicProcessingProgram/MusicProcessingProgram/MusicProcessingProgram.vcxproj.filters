@@ -16,9 +16,6 @@
     <ClCompile Include="set_menu_strings.cpp">
       <Filter>pliki .cpp</Filter>
     </ClCompile>
-    <ClCompile Include="file_support.cpp">
-      <Filter>pliki .cpp</Filter>
-    </ClCompile>
     <ClCompile Include="communication.cpp">
       <Filter>pliki .cpp</Filter>
     </ClCompile>
@@ -29,9 +26,6 @@
       <Filter>pliki .cpp</Filter>
     </ClCompile>
     <ClCompile Include="create_music.cpp">
-      <Filter>pliki .cpp</Filter>
-    </ClCompile>
-    <ClCompile Include="Wav_File_Support.cpp">
       <Filter>pliki .cpp</Filter>
     </ClCompile>
     <ClCompile Include="load_music.cpp">
@@ -51,9 +45,6 @@
     <ClInclude Include="menu.h">
       <Filter>pliki .h</Filter>
     </ClInclude>
-    <ClInclude Include="file_support.h">
-      <Filter>pliki .h</Filter>
-    </ClInclude>
     <ClInclude Include="communication.h">
       <Filter>pliki .h</Filter>
     </ClInclude>
@@ -64,9 +55,6 @@
       <Filter>pliki .h</Filter>
     </ClInclude>
     <ClInclude Include="create_music.h">
-      <Filter>pliki .h</Filter>
-    </ClInclude>
-    <ClInclude Include="Wav_File_Support.h">
       <Filter>pliki .h</Filter>
     </ClInclude>
     <ClInclude Include="load_music.h">

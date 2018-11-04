@@ -17,8 +17,7 @@ std::vector<std::string> return_save_menu()
 {
 	std::vector<std::string> save_menu_strings
 	{
-		"> Save as .wav",
-		"  Save as .txt",
+		"> Save as .txt",
 		"  Back"
 	};
 	return save_menu_strings;

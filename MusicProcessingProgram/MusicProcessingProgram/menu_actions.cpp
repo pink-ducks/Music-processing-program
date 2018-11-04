@@ -3,7 +3,7 @@
 #include "save_as_txt.h"
 #include "display_formatting.h"
 #include "set_menu_strings.h"
-#include "file_support.h"
+#include "communication.h"
 #include "play_music.h"
 #include "load_music.h"
 
@@ -24,13 +24,22 @@ bool is_escape(const KEY_EVENT_RECORD key)
 bool is_finished(const menu_type current_type, const Menu menu)
 {
 	bool is_finished = false;
-	if (current_type == SAVE || current_type == LOAD)
+	if (current_type == LOAD)
 	{
 		if (menu.get_index() == 0 || menu.get_index() == 1)
 		{
 			is_finished = true;
 		}
 	}
+	else
+	if(current_type == SAVE)
+	{
+		if (menu.get_index() == 0)
+		{
+			is_finished = true;
+		}
+	}
+
 	return is_finished;
 }
 
@@ -59,12 +68,9 @@ void save_menu_action(Menu & menu)
 	switch (menu.get_index())
 	{
 	case 0:
-		// save as .mp3
-		break;
-	case 1:
 		save_as_txt();
 		break;
-	case 2:
+	case 1:
 		menu.set_vector(return_main_menu());
 		menu.set_menu_type(MAIN);
 		break;

@@ -153,7 +153,6 @@
     <ClCompile Include="communication.cpp" />
     <ClCompile Include="create_music.cpp" />
     <ClCompile Include="display_formatting.cpp" />
-    <ClCompile Include="file_support.cpp" />
     <ClCompile Include="load_music.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="menu.cpp" />
@@ -161,20 +160,17 @@
     <ClCompile Include="play_music.cpp" />
     <ClCompile Include="save_as_txt.cpp" />
     <ClCompile Include="set_menu_strings.cpp" />
-    <ClCompile Include="Wav_File_Support.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="communication.h" />
     <ClInclude Include="create_music.h" />
     <ClInclude Include="display_formatting.h" />
-    <ClInclude Include="file_support.h" />
     <ClInclude Include="load_music.h" />
     <ClInclude Include="menu.h" />
     <ClInclude Include="menu_actions.h" />
     <ClInclude Include="play_music.h" />
     <ClInclude Include="save_as_txt.h" />
     <ClInclude Include="set_menu_strings.h" />
-    <ClInclude Include="Wav_File_Support.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
