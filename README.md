@@ -38,9 +38,9 @@ After creating, loadind music or choosing "Quit :(" in the main menu your consol
 
 
 #### Created by:
-- Mateusz 
-- Paulina
-- Wojtek
-- Bartek
-- Pawel
-- Kuba
+- Mateusz https://github.com/matpiwowarski
+- Paulina https://github.com/paulinaurbas
+- Wojtek https://github.com/krupowies
+- Bartek https://github.com/bartekfrac
+- Pawel https://github.com/tomaszewskipablo
+- Kuba https://github.com/jakubglatki
