@@ -30,6 +30,9 @@ std::string find_sound(const char key)
 	case 'u':
 		sound_path = "../../Sounds/1.10_10.wav";
 		break;
+	case '*': // easter egg :) 4fun
+		sound_path = "../../Sounds/easter_egg.wav";
+		break;
 	case 'i':
 		sound_path = "../../Sounds/1.8_8.wav";
 		break;
