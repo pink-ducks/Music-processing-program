@@ -1,16 +1,7 @@
 #include "menu.h"
 #include "menu_actions.h"
 #include "communication.h"
-#define _CRTDBG_MAP_ALLOC
-
-struct AtExit
-{
-	~AtExit()
-	{
-		_CrtDumpMemoryLeaks();
-		// breakpoint to check memory leaks after main
-	}
-} doAtExit;
+#include "check_memory_leaks.h"
 
 int main()
 {

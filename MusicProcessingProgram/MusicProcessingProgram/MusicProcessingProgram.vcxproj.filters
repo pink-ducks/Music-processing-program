@@ -60,6 +60,9 @@
     <ClInclude Include="load_music.h">
       <Filter>pliki .h</Filter>
     </ClInclude>
+    <ClInclude Include="check_memory_leaks.h">
+      <Filter>pliki .h</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <Filter Include="pliki .cpp">

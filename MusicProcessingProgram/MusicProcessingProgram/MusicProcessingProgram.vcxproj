@@ -162,6 +162,7 @@
     <ClCompile Include="set_menu_strings.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="check_memory_leaks.h" />
     <ClInclude Include="communication.h" />
     <ClInclude Include="create_music.h" />
     <ClInclude Include="display_formatting.h" />
