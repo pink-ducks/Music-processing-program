@@ -18,7 +18,7 @@ void save_to_vector(std::vector<char> & keys)
 			keys.push_back(key.uChar.AsciiChar);
 		}
 		if (key.wVirtualKeyCode == VK_RETURN) {
-			std::cout << std::endl << "Your music is ready!" << std::endl;
+			std::cout << std::endl << " Your music is ready!" << std::endl;
 		}
 
 	} while (key.wVirtualKeyCode != VK_RETURN);

@@ -6,6 +6,7 @@
 #include "communication.h"
 #include "play_music.h"
 #include "load_music.h"
+#include <iostream>
 
 bool is_escape(const KEY_EVENT_RECORD key)
 {
@@ -86,10 +87,12 @@ void load_menu_action(Menu & menu)
 	{
 	case 0: 
 		file_name = file_name_from_user(WAV);
+		std::cout << std::endl << " Enjoy!" << std::endl;
 		play_music(file_name);
 		break;
 	case 1:
 		file_name = file_name_from_user(TXT);
+		std::cout << std::endl << " Enjoy!" << std::endl;
 		play_from_file(file_name);
 		break;
 	case 2:
