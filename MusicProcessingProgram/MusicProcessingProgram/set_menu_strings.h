@@ -4,6 +4,8 @@
 #include <vector>
 #include <string>
 
+// there are menu texts inside those functions
+
 std::vector<std::string> return_main_menu();
 
 std::vector<std::string> return_save_menu();

@@ -3,7 +3,8 @@
 #include <string>
 #include <vector>
 
-std::string find_sound(const char key);
+std::string find_sound(const char key); 
+// returns file path related with keyboard key from our 'Sounds' folder
 
 void play_sound(const char key);
 
