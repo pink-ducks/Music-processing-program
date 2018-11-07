@@ -12,15 +12,20 @@ Successfully compiled code should look like this, use arrows to choose option fr
 ![menu](https://user-images.githubusercontent.com/32643150/47909566-974f1780-de90-11e8-86e0-d5b7f46aa352.PNG)
 
 ### Create music
-After choosing first line of the main menu your console should look like this, now you can choose file extension for your music or move back to main menu.
+After choosing first line of the main menu your console should look like this, now you can start creating your music or move back to main menu.
 
-![createmenu](https://user-images.githubusercontent.com/32643150/47911486-daf85000-de95-11e8-825f-8b7c4f87bb4a.PNG)
+![createmenu](https://image.ibb.co/cC6avA/saveastxt.png)
  
 
 
-Now you can create music with letter buttons on your keyboard, end your sequence with enter button and name the file for your music.
+Now you can create music with letter buttons on your keyboard, end your sequence with enter button. 
 
-![created](https://user-images.githubusercontent.com/32643150/47911586-227edc00-de96-11e8-9f86-f4123529630d.PNG)
+![created](https://image.ibb.co/jVNthq/play-music.png)
+
+Don't forget to name the file for your music.
+
+![created](https://image.ibb.co/m1QqTV/enterfilename.png)
+
 ### Load music
 After choosing second line of the main menu your console should look like this, now you can choose file extension from which your music will be played or move back to main menu.
 
@@ -29,7 +34,7 @@ After choosing second line of the main menu your console should look like this, 
 
 Now simply enter file name with extension and wait for the sound.
 
-![load2](https://user-images.githubusercontent.com/32643150/47911814-c23c6a00-de96-11e8-9309-689e31a82a94.PNG)
+![load2](https://image.ibb.co/iJXhaA/load-wav.png)
 ### Ending screen
 After creating, loadind music or choosing "Quit :(" in the main menu your console should look like this.
 
