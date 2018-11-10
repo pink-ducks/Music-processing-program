@@ -1,9 +1,10 @@
 # Music-processing-program
-Console application to create and savem, music with your keyboard or load previously made music from .txt and .wav.
+Console application to create and save music with a keyboard or load previously made music from .txt and .wav.
 ## Getting Started 
 Unfortunately our app is only for windows users.
 To test Music-processing-program just download our repo and run the code in your IDE. In case of enormous numer of weird errors try to change Target Platform Version to your available one in project properties.
 **Project->Properties->Configuration Properties->General->Target Platform Version**
+
 Rarely Platform Toolcase also require modification.  
 ## Running the app
 ### Main Menu
